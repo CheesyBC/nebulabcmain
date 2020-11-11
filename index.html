@@ -1,25 +1,24 @@
-<!-- index.html -->
-<html>
-  <head>
-    <link rel="stylesheet" href="node_modules/nes.css/css/nes.min.css">
-	<title>The NebulaBC Network</title>
-  </head>
-  <style>
-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  width: 100%;
-  
-}
-  </style>
-  <body>
-      <div>
-	  <span>test</span>
-	  </div>
-  
-  
-  
-  </body>
-</html>
+    <html>
+    <head>
+    <script>
+    function show(shown, hidden) {
+      document.getElementById(shown).style.display='block';
+      document.getElementById(hidden).style.display='none';
+      return false;
+    }
+    </script>
+    </head>
+    <body>
+    
+      <div id="Page1">
+        Content of page 1
+        <a href="#" onclick="return show('Page2','Page1');">Show page 2</a>
+      </div>
+    
+      <div id="Page2" style="display:none">
+        Content of page 2
+        <a href="#" onclick="return show('Page1','Page2');">Show page 1</a>
+      </div>
+    
+    </body>
+    </html>
